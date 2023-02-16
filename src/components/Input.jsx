@@ -5,14 +5,21 @@ export const Input = ({ setQuery, units, setUnits }) => {
   const [city, setCity] = useState("");
 
   const handleChangeValue = (evt) => {
-    setCity(evt.currentTarget.value);
+    setCity(evt.target.value);
   };
 
   const handleSearchClick = () => {
     if (city !== "") {
       setQuery({ q: city });
+      setCity("");
     }
-    setCity("");
+  };
+
+  const handleKeyDown = (evt) => {
+    if (evt.key === "Enter") {
+      setQuery({ q: city });
+      setCity("");
+    }
   };
 
   const handleLocationClick = () => {
@@ -41,6 +48,7 @@ export const Input = ({ setQuery, units, setUnits }) => {
         <input
           value={city}
           onChange={handleChangeValue}
+          onKeyDown={handleKeyDown}
           type="text"
           placeholder="Search"
           className="text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase"

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import { Header } from "./components/Header";
 import { Input } from "./components/Input";
 import { Temperature } from "./components/Temperature";

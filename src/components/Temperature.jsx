@@ -71,13 +71,13 @@ export const Temperature = ({
           </span>
         </p>
         <p className="font-light">|</p>
-        <UilSun />
+        < UilTemperature />
         <p className="font-light">
           High:{" "}
           <span className="font-medium ml-1">{temp_max.toFixed()}&#176;</span>
         </p>
         <p className="font-light">|</p>
-        <UilSun />
+        < UilTemperature />
         <p className="font-light">
           Low:{" "}
           <span className="font-medium ml-1">{temp_min.toFixed()}&#176;</span>
