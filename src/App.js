@@ -1,6 +1,7 @@
 import "./App.css";
 import { Header } from "./components/Header";
 import { Input } from "./components/Input";
+import { Temperature } from "./components/Temperature";
 import { TimeAndLocation } from "./components/TimeAndLocation";
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
       <Header />
       <Input />
       <TimeAndLocation />
-      </div>
+      <Temperature />
+    </div>
   );
 }
 
